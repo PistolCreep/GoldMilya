@@ -13,7 +13,7 @@ npm run dev
 
 ## Реализовано
 - Next.js (pages) + API routes
-- SQLite (better-sqlite3)
+- SQLite (sqlite3 + sqlite)
 - Роли: user/admin
 - ЛК жильца: заявки + чат по заявке
 - Админка: все заявки, статусы, ответы, обратная связь (feedback)
