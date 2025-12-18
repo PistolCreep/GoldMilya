@@ -1,13 +1,12 @@
-import { getDb } from '../../../lib/db';
+import { getDB } from '../../../lib/db';
 import { requireAdmin } from '../../../lib/auth';
 
-export default function handler(req,res){
-  const admin = requireAdmin(req,res); if (!admin) return;
-  const db = getDb();
+export default async function handler(req,res){
+  const admin = await requireAdmin(req,res); if (!admin) return;
+  const db = await getDB();
 
-  const items = db.prepare('SELECT * FROM feedback ORDER BY id DESC')
-    .all()
-    .map(row=>({ ...row, created_at: String(row.created_at).slice(0,19).replace('T',' ') }));
+  const rows = await db.all('SELECT * FROM feedback ORDER BY id DESC');
+  const items = rows.map(row=>({ ...row, created_at: String(row.created_at).slice(0,19).replace('T',' ') }));
 
   return res.status(200).json({ items });
 }
