@@ -19,7 +19,7 @@ export default function Layout({ children }){
           <Link href="/">ООО «Золотая миля»</Link>
           <span className="badge">УК / жилой дом</span>
         </div>
-        <div style={{display:'flex', gap:8, flexWrap:'wrap', justifyContent:'flex-end'}}>
+        <div className="nav-links">
           <Link href="/about">О компании</Link>
           <Link href="/services">Услуги</Link>
           <Link href="/news">Объявления</Link>
