@@ -23,11 +23,20 @@ export default function Contacts(){
       <div className="grid" style={{marginTop:16}}>
         <div className="card half">
           <h1>Контакты</h1>
-          <p><b>Адрес:</b> г. (пример), ул. (пример), д. 1</p>
-          <p><b>Телефон:</b> +7 (000) 000-00-00</p>
+          <p><b>Адрес:</b> Москва, ул. Пречистенка, д. 33/19, стр. 1</p>
+          <p><b>Телефон:</b> +7 (926) 873-94-52</p>
           <p><b>Email:</b> info@zolotayamile.local</p>
-          <div className="hr"></div>
-          <p className="small">Для диплома данные могут быть демонстрационными.</p>
+          <div style={{marginTop:12}}>
+            <iframe
+              title="Адрес на карте"
+              src="https://www.google.com/maps?q=55.739635,37.589868&z=16&output=embed"
+              width="100%"
+              height="300"
+              style={{borderRadius:12, border:'1px solid var(--border)'}}
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className="card half">
           <h2>Обратная связь</h2>
