@@ -43,7 +43,7 @@ export default function Register(){
             <div style={{marginTop:10}}>
               <label className="small">Пароль</label>
               <input className="input" value={password} onChange={e=>setPassword(e.target.value)} type="password" required />
-              <div className="small" style={{marginTop:6}}>Пароль хранится в БД в виде хеша (bcrypt).</div>
+              <div className="small" style={{marginTop:6}}></div>
             </div>
             <div style={{display:'flex', gap:10, alignItems:'center', marginTop:12}}>
               <button className="btn primary" type="submit">Зарегистрироваться</button>

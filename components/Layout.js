@@ -40,7 +40,7 @@ export default function Layout({ children }){
 
       {children}
 
-      <div className="footer">© {new Date().getFullYear()} ООО «Золотая миля». Дипломный проект. SQLite + ЛК + заявки.</div>
+      <div className="footer">© {new Date().getFullYear()} ООО «Золотая миля».</div>
     </div>
   );
 }
