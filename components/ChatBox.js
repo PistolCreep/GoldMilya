@@ -16,17 +16,25 @@ export default function ChatBox({ requestId, onSent }){
     });
 
     const data = await r.json().catch(()=>({}));
-    if (!r.ok){ setError(data?.error || 'Ошибка'); return; }
+    if (!r.ok){
+      setError(data?.error || 'Не удалось отправить сообщение');
+      return;
+    }
 
     setText('');
     onSent?.();
   }
 
   return (
-    <form onSubmit={send} style={{display:'flex', gap:10, marginTop:10}}>
-      <input className="input" value={text} onChange={e=>setText(e.target.value)} placeholder="Написать сообщение..." />
+    <form className="chat-form" onSubmit={send}>
+      <input
+        className="input"
+        value={text}
+        onChange={e=>setText(e.target.value)}
+        placeholder="Написать сообщение..."
+      />
       <button className="btn primary" type="submit">Отправить</button>
-      {error && <span style={{color:'var(--danger)'}}>{error}</span>}
+      {error && <span className="notice danger">{error}</span>}
     </form>
   );
 }
