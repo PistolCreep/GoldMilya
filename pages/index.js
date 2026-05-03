@@ -89,7 +89,7 @@ export default function Home(){
         </section>
 
         <section className="section split">
-          <div className="image-panel photo-courtyard" />
+          
           <div className="card">
             <span className="section-kicker">О доме и обслуживании</span>
             <h2>Единая точка взаимодействия жильцов и УК</h2>
