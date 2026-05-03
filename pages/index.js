@@ -2,21 +2,14 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import NewsCard from '../components/NewsCard';
+import ServiceCard from '../components/ServiceCard';
+import { services } from '../lib/services';
 
 const advantages = [
   { icon:'01', title:'Онлайн-заявки', text:'Жители отправляют обращения без звонков и повторных объяснений.' },
   { icon:'02', title:'Контроль статусов', text:'Каждая заявка проходит понятные этапы от регистрации до выполнения.' },
   { icon:'03', title:'Новости для жильцов', text:'Плановые работы, собрания и важные объявления собраны в одном разделе.' },
   { icon:'04', title:'Связь с УК', text:'Обратная связь и переписка по заявкам сохраняют историю решений.' }
-];
-
-const services = [
-  { icon:'СН', title:'Сантехника', text:'Протечки, смесители, стояки, водоснабжение и аварийные ситуации.' },
-  { icon:'ЭЛ', title:'Электрика', text:'Освещение, щитки, автоматы, розетки и общедомовые сети.' },
-  { icon:'УБ', title:'Уборка', text:'Подъезды, дворовая территория, вывоз мусора и сезонные работы.' },
-  { icon:'БЛ', title:'Благоустройство', text:'Озеленение, малые формы, покрытие дорожек и контроль двора.' },
-  { icon:'ЛД', title:'Лифты и домофон', text:'Профилактика оборудования, заявки по сбоям и контроль подрядчиков.' },
-  { icon:'ОД', title:'Общедомовое имущество', text:'Инженерные системы, помещения, фасад и плановые осмотры.' }
 ];
 
 export default function Home(){
@@ -69,7 +62,7 @@ export default function Home(){
           </div>
         </section>
 
-        <section className="section">
+        <section className="section services-showcase">
           <div className="section-head">
             <div>
               <span className="section-kicker">Услуги</span>
@@ -77,19 +70,14 @@ export default function Home(){
             </div>
             <Link className="btn" href="/services">Все услуги</Link>
           </div>
-          <div className="service-grid">
-            {services.map(item => (
-              <div className="service-card" key={item.title}>
-                <div className="icon-badge">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
+          <div className="service-grid rich-service-grid">
+            {services.map((service, index) => (
+              <ServiceCard key={service.title} service={service} index={index} />
             ))}
           </div>
         </section>
 
         <section className="section split">
-          
           <div className="card">
             <span className="section-kicker">О доме и обслуживании</span>
             <h2>Единая точка взаимодействия жильцов и УК</h2>
