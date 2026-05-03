@@ -34,8 +34,6 @@ export default function Login(){
             <span className="section-kicker">Вход</span>
             <h1>Личный кабинет жителя</h1>
             <p>Войдите, чтобы создавать заявки, отслеживать статусы и переписываться с управляющей компанией.</p>
-            <div className="hr"></div>
-            <p className="small">Демо-админ: admin@zolotayamile.local / admin123</p>
           </div>
           <div className="card half">
             <h2>Введите данные</h2>
