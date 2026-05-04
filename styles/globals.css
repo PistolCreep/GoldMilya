@@ -61,38 +61,19 @@ b,strong{ color:var(--text); }
   box-shadow:0 14px 42px rgba(31,41,55,.08);
 }
 
-.brand{ display:flex; align-items:center; gap:12px; min-width:0; }
-.brand a{ display:inline-flex; align-items:center; gap:10px; min-width:0; }
-.brand-mark{
-  width:42px;
-  height:42px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  flex:0 0 auto;
-  border-radius:14px;
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#fff;
-  font-weight:800;
-  box-shadow:0 10px 22px rgba(184,137,43,.28);
-}
+.brand{ display:flex; align-items:center; min-width:0; }
+.brand a{ display:inline-flex; align-items:center; min-width:0; }
 .brand-text{
-  font-weight:800;
+  font-size:22px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:0;
   color:var(--dark);
   white-space:nowrap;
-}
-.badge{
-  display:inline-flex;
-  align-items:center;
-  min-height:28px;
-  padding:5px 10px;
-  border-radius:999px;
-  border:1px solid rgba(184,137,43,.24);
-  background:#FFF8E8;
-  color:#7A5A18;
-  font-size:12px;
-  font-weight:700;
-  white-space:nowrap;
+  background:linear-gradient(135deg, var(--dark), #7A5A18 62%, var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
 .nav-links{
@@ -435,38 +416,6 @@ textarea{ min-height:130px; resize:vertical; line-height:1.55; }
   background:
     radial-gradient(circle at 20% 20%, rgba(201,162,74,.28), transparent 34%),
     linear-gradient(135deg, #F5EFE3, #E7ECF3);
-}
-.service-image-placeholder span{
-  width:72px;
-  height:72px;
-  border-radius:22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:22px;
-  font-weight:900;
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow:0 14px 28px rgba(184,137,43,.28);
-}
-.service-badge{
-  position:absolute;
-  left:16px;
-  bottom:16px;
-  z-index:2;
-  min-height:36px;
-  min-width:46px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:8px 12px;
-  border-radius:999px;
-  color:#fff;
-  font-size:13px;
-  font-weight:900;
-  border:1px solid rgba(255,255,255,.28);
-  background:rgba(23,32,51,.78);
-  backdrop-filter:blur(10px);
 }
 .service-body{
   flex:1;

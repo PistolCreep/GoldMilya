@@ -16,11 +16,8 @@ export default function ServiceCard({ service, index = 0 }){
           />
         )}
         {imageFailed && (
-          <div className="service-image-placeholder">
-            <span>{service.badge}</span>
-          </div>
+          <div className="service-image-placeholder" aria-hidden="true" />
         )}
-        <span className="service-badge">{service.badge}</span>
       </div>
       <div className="service-body">
         <h3>{service.title}</h3>

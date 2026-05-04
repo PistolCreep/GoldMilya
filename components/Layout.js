@@ -22,10 +22,8 @@ export default function Layout({ children }){
         <div className="container nav">
           <div className="brand">
             <Link href="/" aria-label="На главную">
-              <span className="brand-mark">ЗМ</span>
               <span className="brand-text">Золотая миля</span>
             </Link>
-            <span className="badge">Управляющая компания</span>
           </div>
 
           <nav className="nav-links" aria-label="Основная навигация">
